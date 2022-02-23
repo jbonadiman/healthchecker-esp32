@@ -1,0 +1,3 @@
+import healthchecks
+
+healthchecks.main()
