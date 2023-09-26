@@ -42,7 +42,7 @@ def ping(host, count=4, timeout=5000, interval=10, quiet=False, size=64):
     h.type = 8 # ICMP_ECHO_REQUEST
     h.code = 0
     h.checksum = 0
-    h.id = urandom.randint(0, 65535)
+    h.id = urandom.getrandbits(16)
     h.seq = 1
 
     # init socket
